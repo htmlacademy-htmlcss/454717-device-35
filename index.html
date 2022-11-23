@@ -10,7 +10,10 @@
   <body>
     <header class="page-header">
       <form class="header-form-search" action="https://echo.htmlacademy.ru/" method="post">
-        <input class="header-input-search" type="text" name="search" placeholder="Поиск по сайту" required>
+        <label class="header-form-label">
+          <span class="visually-hidden">Поиск по сайту</span>
+          <input class="header-input-search" type="text" name="search" placeholder="Поиск по сайту" required>
+        </label>
         <button class="header-input-button" type="submit">Найти</button>
       </form>
       <nav class="navigation">
@@ -53,43 +56,37 @@
             </section>
           </li>
         </ul>
+        <div class="header-catalog-container">
+          <button class="header-catalog-button" type="button">Каталог товаров</button>
+          <div class="header-catalog">
+            <ul class="header-catalog-list">
+              <li class="header-catalog-item">
+                <a class="header-catalog-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="header-catalog-item">
+                <a class="header-catalog-link" href="catalog.html">Моноподы для селфи</a>
+              </li>
+              <li class="header-catalog-item">
+                <a class="header-catalog-link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="header-catalog-list">
+              <li class="header-catalogg-item">
+                <a class="header-catalog-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="header-catalog-item">
+                <a class="header-catalog-link" href="#">
+                  Умные часы</a>
+              </li>
+            </ul>
+            <ul class="header-catalog-list">
+              <li class="header-catalog-item">
+                <a class="header-catalog-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <ul class="main-navigation-list">
-          <li class="main-navigation-item">
-            <a class="main-navigation-link" href="#">Каталог товаров</a>
-            <div class="navigation-catalog">
-              <div class="navigation-catalog-group">
-                <ul class="navigation-catalog-list">
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#">Виртуальная реальность</a>
-                  </li>
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="catalog.html">Моноподы для селфи</a>
-                  </li>
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#">Экшн-камеры</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="navigation-catalog-group">
-                <ul class="navigation-catalog-sublist">
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#">Фитнес-браслеты</a>
-                  </li>
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#">
-                      Умные часы</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="navigation-catalog-group">
-                <ul class="navigation-catalog-sublist">
-                  <li class="navigation-catalog-item">
-                    <a class="navigation-catalog-link" href="#">Квадрокоптеры</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
           <li class="main-navigation-item">
             <a class="main-navigation-link" href="#">Доставка</a>
           </li>
@@ -396,12 +393,12 @@
           <label>
             Ваше имя:
             <input class="delivery-input-text" type="text" name="name" placeholder="Введите имя">
-            <p class="input-message"></p>
+            <span class="input-message"></span>
           </label>
           <label>
             Ваш e-mail:
             <input class="delivery-input-text" type="email" name="email" placeholder="Введите e-mail" required>
-            <p class="input-message input-message-error">Забавный у вас адрес</p>
+            <span class="input-message input-message-error">Забавный у вас адрес</span>
           </label>
           <label>
             Что нужно привезти:
