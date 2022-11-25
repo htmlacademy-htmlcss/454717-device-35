@@ -118,3 +118,76 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
+
+.catalog-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.delivery-button {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.transport-company-item {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  color: #000000;
+}
+
+.contacts-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.subscribe {
+  background-color: #f0f0f0;
+}
+
+.subscribe-input-email {
+  font: inherit;
+  line-height: 30px;
+  color: #444444;
+  background-color: #f0f0f0;
+}
+
+.page-footer {
+  color: #ffffff;
+  background-color: #444444;
+}
+
+.footer-text {
+  color: #ffffff;
+}
+
+.footer-navigation-link {
+  color: #ffffff;
+}
+
+.footer-phone {
+  color: #ffffff;
+}
+
+.delivery-form-label {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.input-message {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.input-message-error {
+  color: #ff3d3d;
+}
