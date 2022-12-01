@@ -61,6 +61,12 @@ body {
   color: #444444;
 }
 
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
 .small-text {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -107,8 +113,6 @@ body {
 }
 
 .page-header {
-  width: 1160px;
-  margin: 0 auto;
   padding: 15px 60px;
   background-image: linear-gradient(transparent 40px, #ffe17f 40px);
 }
@@ -208,10 +212,8 @@ body {
 }
 
 .main-index {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 70px;
+  display: grid;
+  row-gap: 70px;
 }
 
 .main-container {
@@ -220,8 +222,6 @@ body {
 
 .gallery {
   position: relative;
-  width: 1160px;
-  margin: 0 auto;
   background-image: linear-gradient(#ffe17f 114px, transparent 114px);
 }
 
@@ -314,11 +314,6 @@ body {
   list-style-type: none;
 }
 
-.catalog {
-  width: 1160px;
-  margin: 0 auto;
-}
-
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -348,13 +343,12 @@ body {
 }
 
 .services {
-  display: grid;
-  grid-template-columns: 287px 873px;
-  width: 1440px;
-  margin: 0 auto;
-  padding-left: 140px;
-  padding-right: 140px;
   background-image: linear-gradient(transparent 102px, #f0f0f0 102px);
+}
+
+.services-wrapper {
+  display: grid;
+  grid-template-columns: 287px 1fr;
 }
 
 .services-buttons-list {
@@ -370,6 +364,12 @@ body {
 
 .services-button {
   border: none;
+}
+
+.services-slider {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .services-slide {
@@ -395,9 +395,15 @@ body {
   background-image: url("../images/index/services-credit.png");
 }
 
+.services-subtitle {
+  margin: 0 0 34px 0;
+}
+
+.services-description {
+  margin: 0 0 20px 0;
+}
+
 .delivery-button-container {
-  width: 1160px;
-  margin: 0 auto;
   padding: 40px 125px;
   background-color: #f0f0f0;
 }
@@ -411,12 +417,10 @@ body {
   text-decoration: none;
 }
 
-.container-about-us-contacts {
+.about-us-contacts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 96px;
-  width: 1160px;
-  margin: 0 auto;
 }
 
 .about-us-title {
@@ -485,17 +489,23 @@ body {
 }
 
 .subscribe {
+  background-color: #f0f0f0;
+}
+
+.subscribe-container {
+  display: grid;
+  gap: 144px;
+  padding: 64px 0 56px;
+}
+
+.subscribe-wrapper {
   display: flex;
   flex-wrap: wrap;
-  width: 1440px;
-  padding: 64px 140px 56px;
-  background-color: #f0f0f0;
 }
 
 .subscribe-title {
   width: 348px;
   margin: 0;
-  margin-bottom: 144px;
 }
 
 .subscribe-description {
@@ -510,7 +520,7 @@ body {
   width: 810px;
 }
 
-.subscribe-wrapper {
+.subscribe-label-wrapper {
   flex-grow: 1;
 }
 
@@ -522,14 +532,17 @@ body {
   background-color: #f0f0f0;
 }
 .subscribe-text-additional {
-  margin-left: 188px;
+  margin-left: auto;
 }
 
 .page-footer {
-  margin: 0 auto;
-  padding: 62px 140px 61px;
+  margin-top: auto;
   color: #ffffff;
   background-color: #444444;
+}
+
+.page-footer-container {
+  padding: 62px 0 61px;
 }
 
 .footer-logo {
@@ -617,6 +630,10 @@ body {
   width: 240px;
   margin-left: auto;
   text-align: right;
+}
+
+.modal-close {
+  display: none;
 }
 
 .input-message {
