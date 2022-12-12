@@ -23,17 +23,17 @@
           </label>
           <button class="header-input-button small-text" type="submit">Найти</button>
         </form>
-        <ul class="user-navigation-list">
-          <li class="user-navigation-item">
-            <a class="user-navigation-link user-navigation-log-in" href="#">Войти</a>
+        <ul class="personal-account-list">
+          <li class="personal-account-item">
+            <a class="personal-account-link personal-account-log-in link" href="#">Войти</a>
           </li>
         </ul>
         <ul class="user-navigation-list">
           <li class="user-navigation-item">
-            <a class="user-navigation-link user-navigation-compare" href="#">Сравнить</a>
+            <a class="user-navigation-link user-navigation-compare link" href="#">Сравнить</a>
           </li>
           <li class="user-navigation-item user-navigation-item-char">
-            <a class="user-navigation-link user-navigation-cart" href="#">Корзина</a>
+            <a class="user-navigation-link user-navigation-cart link" href="#">Корзина</a>
             <section class="cart">
               <h2 class="visually-hidden">Корзина</h2>
               <ul class="cart-products-list">
@@ -60,38 +60,42 @@
       </div>
       <nav class="navigation">
         <div class="navigation-header-catalog">
-          <button class="header-catalog-button accent-main" type="button">Каталог товаров</button>
+          <button class="header-catalog-button" type="button">
+            <span class="header-catalog-button-text accent-main">Каталог товаров</span>
+            <span class="header-catalog-button-icon"></span>
+          </button>
           <ul class="header-catalog-list">
             <li class="header-catalog-item">
-              <a class="header-catalog-link" href="#">Виртуальная реальность</a>
+              <a class="header-catalog-link link" href="#">Виртуальная реальность</a>
             </li>
             <li class="header-catalog-item">
-              <a class="header-catalog-link" href="#">Фитнес-браслеты</a>
+              <a class="header-catalog-link link" href="#">Фитнес-браслеты</a>
             </li>
             <li class="header-catalog-item">
-              <a class="header-catalog-link" href="#">Квадрокоптеры</a>
+              <a class="header-catalog-link link" href="#">Квадрокоптеры</a>
             </li>
             <li class="header-catalogg-item">
-              <a class="header-catalog-link" href="catalog.html">Моноподы для селфи</a>
+              <a class="header-catalog-link link" href="catalog.html">Моноподы для селфи</a>
             </li>
             <li class="header-catalog-item">
-              <a class="header-catalog-link" href="#">Умные часы</a>
+              <a class="header-catalog-link link" href="#">Умные часы</a>
             </li>
             <li class="header-catalog-item">
-              <a class="header-catalog-link" href="#">Экшн-камеры</a>
+              <a class="header-catalog-link link" href="#">Экшн-камеры</a>
             </li>
           </ul>
         </div>
         <ul class="main-navigation-list">
           <li class="main-navigation-item">
-            <a class="main-navigation-link accent-main" href="#">Доставка</a>
+            <a class="main-navigation-link accent-main link" href="#">Доставка</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link accent-main" href="#">Гарантия</a>
+            <a class="main-navigation-link accent-main link" href="#">Гарантия</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link accent-main" href="#">Контакты</a>
+            <a class="main-navigation-link accent-main link" href="#">Контакты</a>
           </li>
+          <!-- Используйте класс main-navigation-link-active для активного пункта меню-->
         </ul>
       </nav>
     </header>
@@ -101,15 +105,15 @@
       <section class="gallery container">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="slider-list">
-          <li class="slider-item slider-item-current">
-            <img class="slider-image" src="images/index/slider-quadcopte.png" width="560" height="560"
+          <li class="slider-item slider-item-quadcopter slider-item-current">
+            <img class="slider-image" src="images/index/slider-quadcopter.png" width="560" height="560"
               alt="Квадрокоптер.">
             <div class="slider-content">
               <h3 class="slider-title title">Порхает как бабочка, жалит как пчела!</h3>
               <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
                 замаскированным под стандартную камеру.
               </p>
-              <a class="slider-button accent-main" href="#">Подробнее</a>
+              <a class="slider-button button accent-main" href="#">Подробнее</a>
               <dl class="slider-description">
                 <div class="slider-description-wrapper">
                   <dt class="slider-description-term">800 м</dt>
@@ -122,7 +126,7 @@
               </dl>
             </div>
           </li>
-          <li class="slider-item">
+          <li class="slider-item slider-item-fitness-bracelet">
             <img class="slider-image" src="/images/index/slider-fitness-bracelet.png" width="560" height="560"
               alt="Фитнес-браслет.">
             <div class="slider-content">
@@ -139,7 +143,7 @@
               </dl>
             </div>
           </li>
-          <li class="slider-item">
+          <li class="slider-item slider-item-selfie-stick">
             <img class="slider-image" src="images/index/slider-selfie-stick.png" width="560" height="560"
               alt="Самая длинная палка для селфи.">
             <div class="slider-content">
@@ -323,7 +327,9 @@
             alt="Логотип интернет-магазина Device">
         </a>
         <div class="footer-container">
-          <p class="footer-text small-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          <div class="footer-left">
+            <p class="footer-text small-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          </div>
           <div class="footer-center">
             <ul class="footer-navigation-list">
               <li class="footer-navigation-item">
