@@ -125,6 +125,49 @@ body {
   outline-offset: 2px;
 }
 
+
+.button {
+  position: relative;
+  display: inline-flex;
+  padding: 10px 37px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(0.2);
+  transition: transform 0.3s ease;
+  background-color: #ffe17f;
+  z-index: -1;
+}
+
+.button:hover::before {
+  transform: translate(-50%, -50%) scaleY(1);
+  transition: transform 0.3s ease;
+}
+
+.button:active::before {
+  background-color: #ffcc33;
+}
+
+.button:focus {
+  outline: 2px solid #af4fff;
+}
+
+.button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .page-header {
   position: relative;
   padding: 20px 60px 7px 60px;
@@ -522,38 +565,12 @@ body {
   margin-bottom: 52px;
 }
 
-.button {
-  position: relative;
-  display: inline-flex;
-  padding: 10px 17px;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  width: 105%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scaleY(0.2);
-  transition: transform 0.3s ease;
-  background-color: #ffe17f;
-  z-index: -1;
-}
-
-.button:hover {
-  background-color: ;
-}
-
 .slider-button {
   margin: 0 0 50px 0;
 }
 
 .slider-description {
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -591,15 +608,44 @@ body {
   cursor: pointer;
 }
 
+.gallery-button:hover {
+  opacity: 0.6;
+}
+
+.gallery-button:focus-visible {
+  opacity: 1;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .gallery-button:focus {
+    opacity: 1;
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
+}
+
+.gallery-button:active {
+  opacity: 0.3;
+}
+
+.gallery-button:disabled {
+  opacity: 0.1;
+}
+
 .gallery-next {
   transform: rotate(180deg);
 }
 
 .gallery-pagination {
   position: absolute;
+  margin: 0;
+  padding: 0;
   display: flex;
-  gap: 40px;
-  bottom: 0;
+  justify-content: center;
+  gap: 20px;
+  bottom: -3px;
   left: 50%;
   transform: translate(-50%);
 }
@@ -609,6 +655,44 @@ body {
   padding: 0;
   list-style-type: none;
 }
+
+.gallery-pagination-button {
+  margin: 0;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.gallery-pagination-button-current {
+  background-color: #000000;
+}
+
+.gallery-pagination-button:hover {
+  opacity: 0.6;
+}
+
+.gallery-pagination-button:focus-visible {
+  opacity: 1;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .gallery-pagination-button:focus {
+    opacity: 1;
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
+}
+
+.gallery-pagination-button:active {
+  opacity: 1;
+}
+
+
 
 .catalog-list {
   display: flex;
@@ -644,6 +728,26 @@ body {
   background-position: top;
 }
 
+.catalog-link:hover::before {
+  background-color: #ffc700;
+}
+
+.catalog-link:active {
+  opacity: 0.3;
+}
+
+.catalog-link:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .catalog-link:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
+}
+
 .catalog-virtual-reality::before {
   background-image: url("../images/index/catalog-virtual-reality.svg");
 }
@@ -669,7 +773,7 @@ body {
 }
 
 .services {
-  background-image: linear-gradient(transparent 102px, #f0f0f0 102px);
+  background-image: linear-gradient(transparent 115px, #f0f0f0 115px);
 }
 
 .services-wrapper {
@@ -680,19 +784,46 @@ body {
 .services-buttons-list {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 64px 0 65px 0;
+  margin: 13px 0 72px 0;
+  padding: 64px 0 15px 0;
   border-right: 7px solid #000000;
   list-style-type: none;
 }
 
 .services-buttons-item {
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .services-button {
+  min-width: 160px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.services-button-active {
+  position: relative;
+  display: inline-flex;
+  padding: 10px;
+  color: #ffe17f;
   border: none;
 }
+
+.services-button-active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  background-color: #000000;
+}
+
+.services-button-active:hover,
+.services-button-active:focus,
+.services-button-active:active {
+  transform: translateX(26px);
+  transition: transform 0.3s ease;
+}
+
 
 .services-slider {
   margin: 0;
@@ -702,7 +833,7 @@ body {
 
 .services-slide {
   display: none;
-  padding: 72px 282px 73px 116px;
+  padding: 85px 282px 73px 116px;
   background-repeat: no-repeat;
   background-position: right 63px center;
 }
