@@ -33,27 +33,35 @@
             <a class="user-navigation-link user-navigation-compare link" href="#">Сравнить</a>
           </li>
           <li class="user-navigation-item user-navigation-item-char">
-            <a class="user-navigation-link user-navigation-cart link" href="#">Корзина</a>
+            <a class="user-navigation-link user-navigation-cart link" href="#" data-counter="2">Корзина</a>
             <section class="cart">
               <h2 class="visually-hidden">Корзина</h2>
               <ul class="cart-products-list">
                 <li class="cart-product-item">
-                  <a class="cart-product-link small-text" href="">Любительская селфи-палка</a>
-                  <button type="button">
+                  <a class="cart-product-link small-text" href="#">
+                    <img class="cart-product-photo" src="images/header/product-1-small.png" width="49" height="43" alt="Любительская селфи-палка.">
+                    <span class="cart-product-text">Любительская селфи-&nbspпалка</span>
+                  </a>
+                  <button class="cart-product-delete" type="button">
                     <span class="visually-hidden">Удалить из корзины</span>
                   </button>
                 </li>
                 <li class="cart-product-item">
-                  <a class="cart-product-link small-text" href="#">Профессиональная
-                    селфи-палка</a>
-                  <button type="button">
+                  <a class="cart-product-link small-text" href="#">
+                    <img class="cart-product-photo" src="images/header/product-2-small.png" width="49" height="43" alt="Профессиональная селфи-палка.">
+                    <span class="cart-product-text">Профессиональная селфи-палка</span>
+                  </a>
+                  <button class="cart-product-delete" type="button">
                     <span class="visually-hidden">Удалить из корзины</span>
                   </button>
                 </li>
               </ul>
-              <p class="cart-amout-text">Товаров: 2</p>
-              <p class="cart-total-text">Сумма: 2000 ₽</p>
+              <div class="cart-text">
+                <p class="cart-amout-text small-text">Товаров: 2</p>
+                <p class="cart-total-text small-text">Сумма: 2000 ₽</p>
+              </div>
               <a class="cart-button accent-main" href="#">Открыть корзину</a>
+              <!-- Чтобы добавить кнопке "Открыть корзину" состояние disabled добавьте ссылке .cart-button класс disabled и уберите атрибут href -->
             </section>
           </li>
         </ul>
@@ -95,7 +103,7 @@
           <li class="main-navigation-item">
             <a class="main-navigation-link accent-main link" href="#">Контакты</a>
           </li>
-          <!-- Используйте класс main-navigation-link-active для активного пункта меню-->
+          <!-- Используйте класс main-navigation-link-active для активной ссылки-->
         </ul>
       </nav>
     </header>
@@ -396,8 +404,9 @@
       </div>
     </footer>
 
-    <div class="modal-container modal-close">
-      <section class="modal-delivery">
+    <!-- Для открытия модального окна уберите класс modal-close из div.modal-container -->
+    <div class="modal-container">
+      <section class="modal modal-delivery">
         <h2 class="modal-delivery-title title">Доставка под заказ</h2>
         <button class="modal-close" type="button">
           <span class="visually-hidden">Закрыть.</span>
