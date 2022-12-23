@@ -2145,6 +2145,18 @@ margin: 0;
   margin: 0;
   text-align: center;
   transform: translate(-50%);
+  z-index: 1;
+}
+
+.product-details::before {
+  position: absolute;
+  content: "";
+  background-color: #ffe17f;
+  width: calc(100% + 80px);
+  height: 8px;
+  top: 5px;
+  left: -40px;
+  z-index: -1;
 }
 
 .product-link:hover .product-details {
@@ -2171,7 +2183,7 @@ margin: 0;
   opacity: 0.8;
 }
 
-.product-link:active .button::before {
+.product-link:active .product-details::before {
   background-color: #ffc700;
 }
 
