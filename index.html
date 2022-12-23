@@ -33,7 +33,7 @@
             <a class="user-navigation-link user-navigation-compare link" href="#">Сравнить</a>
           </li>
           <li class="user-navigation-item user-navigation-item-char">
-            <a class="user-navigation-link user-navigation-cart link" href="#" data-counter="2">Корзина</a>
+            <button class="user-navigation-link user-navigation-cart link" type="button" data-counter="2">Корзина</button>
             <section class="cart">
               <h2 class="visually-hidden">Корзина</h2>
               <ul class="cart-products-list">
@@ -41,7 +41,7 @@
                   <a class="cart-product-link small-text" href="#">
                     <img class="cart-product-photo" src="images/header/product-1-small.png" width="49" height="43"
                       alt="Любительская селфи-палка.">
-                    <span class="cart-product-text">Любительская селфи-&nbspпалка</span>
+                    <span class="cart-product-text">Любительская селфи-&nbsp;палка</span>
                   </a>
                   <button class="cart-product-delete" type="button">
                     <span class="visually-hidden">Удалить из корзины</span>
@@ -63,7 +63,6 @@
                 <p class="cart-total-text small-text">Сумма: 2000 ₽</p>
               </div>
               <a class="cart-button accent-main" href="#">Открыть корзину</a>
-              <!-- Чтобы добавить кнопке "Открыть корзину" состояние disabled добавьте ссылке .cart-button класс disabled и уберите атрибут href -->
             </section>
           </li>
         </ul>
@@ -322,7 +321,7 @@
                 <span class="visually-hidden">Ваш электронный адрес</span>
                 <input class="subscribe-input-email" type="email" name="subscribe-email" placeholder="Ваш e-mail"
                   required>
-                <!-- Используйте класс .error обозначения ошибки -->
+                <!-- Используйте класс .error для обозначения ошибки -->
               </label>
               <button class="button-subscribe accent-main" type="submit">Подписаться</button>
             </form>
@@ -420,20 +419,24 @@
             <label class="delivery-item subtitle">
               <span class="delivery-subtitle">Ваше имя:</span>
               <input class="delivery-input-text delivery-input-name small-text form-states" type="text" name="name" placeholder="Введите имя">
-              <span class="input-message"></span>
+              <!-- Для вывода состояния "Ошибка" добавьте класс .error тегу input.delivery-input-text -->
+              <span class="input-message">Добавьте имя</span>
+              <!-- Для вывода сообщения добавьте класс .input-message-text-show тегу span.input-message -->
             </label>
             <label class="delivery-item subtitle">
               <span class="delivery-subtitle">Ваш e-mail:</span>
               <input class="delivery-input-text delivery-input-email small-text form-states" type="email" name="email" placeholder="Введите e-mail"
                 required>
+              <!-- Для вывода состояния "Ошибка" добавьте класс .error тегу input.delivery-input-text -->
               <span class="input-message input-message-error">Забавный у вас адрес</span>
+               <!-- Для вывода сообщения об ошибке добавьте класс .input-message-error-show тегу span.input-message-error -->
             </label>
           </div>
           <div class="delivery-container">
             <label class="delivery-item-order subtitle">
               <span class="delivery-subtitle">Что нужно привезти:</span>
-              <input class="delivery-input-text small-text form-states" type="text" name="order" placeholder="В свободной форме"
-                required>
+              <textarea class="delivery-input-text delivery-input-text-order small-text form-states" name="order" placeholder="В свободной форме" rows="1" required></textarea>
+               <!-- Для вывода состояния "Ошибка" добавьте класс .error тегу input.delivery-input-text -->
             </label>
             <div class="delivery-item-amount">
               <label class="delivery-amount-subtitle subtitle delivery-subtitle" for="delivery-amount">Количество:</label>
@@ -441,10 +444,11 @@
                 <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-amount"></button>
                 <span class="tooltip-text small-text" role="tooltip" id="tooltip-label-amount">
                   Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
-                к&nbspпровозу багажа.
+                к&nbsp;провозу багажа.
                 </span>
               </span>
               <div class="delivery-amount-wrapper">
+                <!-- Для вывода состояния "Ошибка" добавьте класс .error тегу div.delivery-amount-wrapper -->
                 <button class="button-amount button-amount-decrease" type="button">
                   <span class="visually-hidden">Уменьшить количество</span>
                 </button>
