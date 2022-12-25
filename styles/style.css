@@ -785,7 +785,7 @@ body {
 }
 
 .slider-content {
-  margin-top: 85px;
+  padding: 85px 0 30px 0;
 }
 
 .slider-title {
@@ -894,6 +894,7 @@ body {
 }
 
 .gallery-pagination-button {
+  position: relative;
   margin: 0;
   padding: 0;
   width: 12px;
@@ -902,6 +903,16 @@ body {
   border: 2px solid #000000;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.gallery-pagination-button::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .gallery-pagination-button-current {
@@ -1698,11 +1709,13 @@ body {
   position: relative;
   width: 360px;
   padding-bottom: 40px;
+  pointer-events: none;
 }
 
 .delivery-subtitle {
-  display: block;
+  display: inline-flex;
   margin-bottom: 14px;
+  pointer-events: all;
 }
 
 .input-message {
@@ -1739,6 +1752,7 @@ body {
   background-repeat: no-repeat;
   background-position: right 20px center;
   border: none;
+  pointer-events: all;
 }
 
 .delivery-input-name {
@@ -1752,10 +1766,12 @@ body {
 .delivery-item-order {
   width: 540px;
   margin: 0 40px 20px 0;
+  pointer-events: none;
 }
 
 .delivery-input-text-order {
   max-width: 540px;
+  resize: none;
 }
 
 .delivery-item-amount {

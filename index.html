@@ -4,8 +4,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Device. Интернет-магазин гаджетов.</title>
     <link rel="stylesheet" href="styles/style.css">
+    <title>Device. Интернет-магазин гаджетов.</title>
+    <meta name="description" content="Мы продаем лучшие в мире квадрокоптеры и прочие штучки">
   </head>
 
   <body>
@@ -63,6 +64,7 @@
                 <p class="cart-total-text small-text">Сумма: 2000 ₽</p>
               </div>
               <a class="cart-button accent-main" href="#">Открыть корзину</a>
+              <!-- Для отображения состояния Disabled уберите атрибут href у a.cart-button -->
             </section>
           </li>
         </ul>
@@ -114,6 +116,7 @@
       <section class="gallery container">
         <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="slider-list">
+          <!-- Для отображения текущего слайда добавьте текущему li.slider-item класс slider-item-current -->
           <li class="slider-item slider-item-quadcopter slider-item-current">
             <img class="slider-image" src="images/index/slider-quadcopter.png" width="560" height="560"
               alt="Квадрокоптер.">
@@ -233,6 +236,7 @@
         <div class="container services-wrapper">
           <h2 class="visually-hidden">Дополнительные услуги.</h2>
           <ul class="services-buttons-list">
+          <!-- Для отображения текущей кнопки добавьте текущему button.services-button класс services-button-active и уберите класс button -->
             <li class="services-buttons-item">
               <button class="services-button services-button-active accent-main" type="button">Доставка</button>
             </li>
