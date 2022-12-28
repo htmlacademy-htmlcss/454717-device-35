@@ -42,22 +42,32 @@
               <h2 class="visually-hidden">Корзина</h2>
               <ul class="cart-products-list">
                 <li class="cart-product-item">
-                  <a class="cart-product-link small-text" href="#">Любительская селфи-палка</a>
-                  <button type="button">
+                  <a class="cart-product-link small-text" href="#">
+                    <img class="cart-product-photo" src="images/header/product-1-small.png" width="49" height="43"
+                      alt="Любительская селфи-палка.">
+                    <span class="cart-product-text">Любительская селфи-&nbsp;палка</span>
+                  </a>
+                  <button class="cart-product-delete" type="button">
                     <span class="visually-hidden">Удалить из корзины</span>
                   </button>
                 </li>
                 <li class="cart-product-item">
-                  <a class="cart-product-link small-text" href="#">Профессиональная
-                    селфи-палка</a>
-                  <button type="button">
+                  <a class="cart-product-link small-text" href="#">
+                    <img class="cart-product-photo" src="images/header/product-2-small.png" width="49" height="43"
+                      alt="Профессиональная селфи-палка.">
+                    <span class="cart-product-text">Профессиональная селфи-палка</span>
+                  </a>
+                  <button class="cart-product-delete" type="button">
                     <span class="visually-hidden">Удалить из корзины</span>
                   </button>
                 </li>
               </ul>
-              <p class="cart-amout-text">Товаров: 2</p>
-              <p class="cart-total-text">Сумма: 2000 ₽</p>
+              <div class="cart-text">
+                <p class="cart-amount-text small-text">Товаров: 2</p>
+                <p class="cart-total-text small-text">Сумма: 2000 ₽</p>
+              </div>
               <a class="cart-button accent-main" href="#">Открыть корзину</a>
+              <!-- Для отображения состояния Disabled уберите атрибут href у a.cart-button -->
             </section>
           </li>
         </ul>
@@ -230,8 +240,10 @@
             <ul class="products-list">
               <li class="product-item">
                 <a class="product-link product-new" href="#">
-                  <img class="product-photo" src="images/catalog/product-1.png" width="360" height="380"
-                    alt="Любительская селфи-палка.">
+                  <div class="product-photo-wrapper">
+                    <img class="product-photo" src="images/catalog/product-1.png" width="360" height="380"
+                      alt="Любительская селфи-палка.">
+                  </div>
                   <h3 class="product-title subtitle">Любительская <br>селфи-палка</h3>
                   <span class="product-price">500 ₽</span>
                   <p class="product-details accent-main">Подробнее</p>
@@ -239,8 +251,10 @@
               </li>
               <li class="product-item">
                 <a class="product-link" href="#">
-                  <img class="product-photo" src="images/catalog/product-2.png" width="360" height="380"
-                    alt="Профессиональная селфи-палка.">
+                  <div class="product-photo-wrapper">
+                    <img class="product-photo" src="images/catalog/product-2.png" width="360" height="380"
+                      alt="Профессиональная селфи-палка.">
+                  </div>
                   <h3 class="product-title subtitle">Профессиональная <br>селфи-палка</h3>
                   <span class="product-price">1 500 ₽</span>
                   <p class="product-details accent-main">Подробнее</p>
@@ -248,8 +262,10 @@
               </li>
               <li class="product-item">
                 <a class="product-link" href="#">
-                  <img class="product-photo" src="images/catalog/product-3.png" width="360" height="380"
-                    alt="Непотопляемая селфи-палка.">
+                  <div class="product-photo-wrapper">
+                    <img class="product-photo" src="images/catalog/product-3.png" width="360" height="380"
+                      alt="Непотопляемая селфи-палка.">
+                  </div>
                   <h3 class="product-title subtitle">Непотопляемая <br>селфи-палка</h3>
                   <span class="product-price">2 500 ₽</span>
                   <p class="product-details accent-main">Подробнее</p>
@@ -257,8 +273,10 @@
               </li>
               <li class="product-item">
                 <a class="product-link" href="#">
-                  <img class="product-photo" src="images/catalog/product-4.png" width="360" height="380"
-                    alt="Селфи-палка «Следуй за мной».">
+                  <div class="product-photo-wrapper">
+                    <img class="product-photo" src="images/catalog/product-4.png" width="360" height="380"
+                      alt="Селфи-палка «Следуй за мной».">
+                  </div>
                   <h3 class="product-title subtitle">Селфи-палка «Следуй за&nbsp;мной»</h3>
                   <span class="product-price">1 500 ₽</span>
                   <p class="product-details accent-main">Подробнее</p>
