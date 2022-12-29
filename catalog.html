@@ -132,26 +132,20 @@
       <div class="catalog-inner">
         <div class="catalog-inner-container container">
           <section class="catalog-filter">
-            <h2 class="catalog-filter-title accent-catalog">Фильтр</h2>
+            <h2 class="catalog-filter-title accent-catalog">Фильтр:</h2>
             <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="filter-group filter-group-price">
                 <legend class="filter-group-title subtitle">Стоимость</legend>
                 <div class="filter-range-scale">
                   <div class="filter-range-bar">
                     <button class="price-toggle price-toggle-min" type="button">
-                      <span class="visually-hidden">Введите минимальную цену.</span>
+                      <span class="visually-hidden">Выберите минимальную цену.</span>
                     </button>
-                    <label class="filter-range-label filter-range-label-min">
-                      <span class="filter-range-text">от</span>
-                      <input class="filter-input-price" type="number" name="min-price" value="0">
-                    </label>
                     <button class="price-toggle price-toggle-max" type="button">
-                      <span class="visually-hidden">Введите максимальную цену.</span>
+                      <span class="visually-hidden">Выберите максимальную цену.</span>
                     </button>
-                    <label class="filter-range-label filter-range-label-max">
-                      <span class="filter-range-text">до</span>
-                      <input class="filter-input-price" type="number" name="max-price" value="5000">
-                    </label>
+                    <input class="filter-input-price filter-input-price-min" type="text" name="min-price" placeholder="от 0" aria-label="Введите минимальную цену.">
+                    <input class="filter-input-price filter-input-price-max" type="text" name="max-price" placeholder="до 5000" aria-label="Введите максимальную цену.">
                   </div>
                 </div>
 
