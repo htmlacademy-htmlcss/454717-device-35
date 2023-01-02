@@ -282,6 +282,10 @@ body {
   outline-offset: 2px;
 }
 
+.header-input-search:hover {
+  opacity: 0.6;
+}
+
 .header-input-search:focus {
   outline: none;
 }
@@ -348,9 +352,20 @@ body {
 }
 
 .personal-account-link {
+  position: relative;
   display: block;
   color: #000000;
   text-decoration: none;
+}
+
+.personal-account-link::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: calc(100% + 20px);
 }
 
 .personal-account-log-in {
@@ -381,9 +396,20 @@ body {
 }
 
 .user-navigation-link {
+  position: relative;
   display: block;
   color: #000000;
   text-decoration: none;
+}
+
+.user-navigation-link::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: calc(100% + 20px);
 }
 
 .user-navigation-compare {
@@ -395,8 +421,7 @@ body {
 
 .user-navigation-cart {
   position: relative;
-  padding: 0;
-  padding-left: 43px;
+  padding: 0 0 0 43px;
   font: inherit;
   line-height: inherit;
   background-color: transparent;
@@ -407,7 +432,7 @@ body {
   cursor: pointer;
 }
 
-.user-navigation-cart::before {
+.user-navigation-cart::after {
   position: absolute;
   right: calc(100% - 22px);
   top: 5px;
@@ -691,10 +716,21 @@ body {
 }
 
 .header-catalog-link {
+  position: relative;
   font-size: 16px;
   line-height: 18px;
   color: #000000;
   text-decoration: none;
+}
+
+.header-catalog-link::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: calc(100% + 15px);
 }
 
 .header-catalog-link-current {
@@ -717,7 +753,19 @@ body {
 }
 
 .main-navigation-link {
+  position: relative;
   text-decoration: none;
+  z-index: 1;
+}
+
+.main-navigation-link::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: calc(100% + 20px);
 }
 
 .main-navigation-link-active {
@@ -757,7 +805,6 @@ body {
 
 .slider-item::before {
   position: absolute;
-  content: "";
   right: 50px;
   top: 46px;
   font-weight: 700;
@@ -1290,7 +1337,16 @@ body {
   font-weight: 400;
   font-style: normal;
   margin: 0;
+  padding: 10px 0;
   color: #000000;
+}
+
+.contacts-address-phone:hover {
+  opacity: 0.6;
+}
+
+.contacts-address-phone:active{
+  opacity: 0.3;
 }
 
 .contacts-address-phone:focus-visible {
@@ -1363,6 +1419,10 @@ body {
   outline: none;
 }
 
+.subscribe-input-email:hover {
+  background-color: #ebebeb;
+}
+
 .subscribe-input-email:focus {
   background-color: #dcdcdc;
   outline: none;
@@ -1391,6 +1451,8 @@ body {
 
 .button-subscribe:active {
   color: rgba(255, 255, 255, 0.3);
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .button-subscribe:focus-visible {
@@ -1522,8 +1584,19 @@ body {
 }
 
 .footer-navigation-link {
+  position: relative;
   color: #ffffff;
   text-decoration: none;
+}
+
+.footer-navigation-link::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: calc(100% + 20px);
 }
 
 .footer-navigation-link:hover {
@@ -1604,9 +1677,20 @@ body {
 }
 
 .footer-phone {
+  position: relative;
   display: block;
   margin-bottom: 10px;
   color: #ffffff;
+}
+
+.footer-phone::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: calc(100% + 20px);
 }
 
 .footer-copyright-link {
@@ -1646,6 +1730,7 @@ body {
 }
 
 .modal {
+  position: relative;
   margin: auto;
   width: 920px;
   padding: 62px 70px;
@@ -1654,23 +1739,19 @@ body {
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.modal-delivery {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .modal-delivery-title {
-  margin: 0 0 42px 0;
+  margin: 0 70px 42px 0;
 }
 
 .modal-button-close {
-  position: relative;
+  position: absolute;
+  top: 73px;
+  right: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 26px;
   height: 26px;
-  margin: 11px 0 0 auto;
   padding: 0;
   background-color: transparent;
   border: none;
@@ -1741,6 +1822,7 @@ body {
   display: inline-flex;
   margin-bottom: 14px;
   pointer-events: all;
+  cursor: pointer;
 }
 
 .input-message {
@@ -1778,6 +1860,7 @@ body {
   background-position: right 20px center;
   border: none;
   pointer-events: all;
+  cursor: pointer;
 }
 
 .delivery-input-name {
@@ -1952,6 +2035,7 @@ body {
   -webkit-appearance: none;
   appearance: none;
   -moz-appearance: textfield;
+  cursor: pointer;
   z-index: 1;
 }
 
@@ -1987,7 +2071,7 @@ margin: 0;
 }
 
 .catalog-title-container {
-  padding: 35px 60px 28px;
+  padding: 35px 60px 18px;
 }
 
 .catalog-title {
@@ -2003,14 +2087,25 @@ margin: 0;
 }
 
 .breadcrumbs-item:not(:last-child) {
-  padding-right: 36px;
+  padding: 0 36px 10px 0;
   background-image: url("../images/catalog/breadcrumbs-arrow.svg");
   background-repeat: no-repeat;
   background-position: top 11px right 15px;
 }
 
 .breadcrumbs-link {
+  position: relative;
   text-decoration: none;
+}
+
+.breadcrumbs-link::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: calc(100% + 20px);
 }
 
 .catalog-inner {
@@ -2319,6 +2414,7 @@ margin: 0;
   height: 100%;
   background-color: #f0f0f0;
   opacity: 0.8;
+  z-index: 1;
   display: none;
 }
 
@@ -2328,12 +2424,33 @@ margin: 0;
 }
 
 .sorting-select {
+  padding: 4px 10px;
   font: inherit;
   line-height: 30px;
   color: #000000;
   border: none;
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
+}
+
+.sorting-select:hover {
+  opacity: 0.6;
+}
+
+.sorting-select:active {
+  opacity: 0.3;
+}
+
+.sorting-select:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .sorting-select:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
 }
 
 .products {
@@ -2386,6 +2503,7 @@ margin: 0;
 }
 
 .product-price {
+  max-width: 135px;
   color: #444444;
   margin-left: auto;
   line-height: 21px;
@@ -2456,6 +2574,10 @@ margin: 0;
 .product-link.product-new:hover .product-price {
   opacity: 0.6;
 }
+
+/* .product-link.product-new:hover::before {
+  opacity: 0.6;
+} */
 
 .product-link.product-new:active .product-title {
   opacity: 0.6;
