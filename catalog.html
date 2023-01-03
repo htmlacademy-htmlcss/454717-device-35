@@ -37,7 +37,8 @@
             <a class="user-navigation-link user-navigation-compare link" href="#">Сравнить</a>
           </li>
           <li class="user-navigation-item user-navigation-item-char">
-            <button class="user-navigation-link user-navigation-cart link" type="button" data-counter="2">Корзина</button>
+            <button class="user-navigation-link user-navigation-cart link" type="button"
+              data-counter="2">Корзина</button>
             <section class="cart">
               <h2 class="visually-hidden">Корзина</h2>
               <ul class="cart-products-list">
@@ -144,8 +145,10 @@
                     <button class="price-toggle price-toggle-max" type="button">
                       <span class="visually-hidden">Выберите максимальную цену.</span>
                     </button>
-                    <input class="filter-input-price filter-input-price-min" type="text" name="min-price" placeholder="от 0" aria-label="Введите минимальную цену.">
-                    <input class="filter-input-price filter-input-price-max" type="text" name="max-price" placeholder="до 5000" aria-label="Введите максимальную цену.">
+                    <input class="filter-input-price filter-input-price-min" type="text" name="min-price"
+                      placeholder="от 0" aria-label="Введите минимальную цену.">
+                    <input class="filter-input-price filter-input-price-max" type="text" name="max-price"
+                      placeholder="до 5000" aria-label="Введите максимальную цену.">
                   </div>
                 </div>
 
@@ -279,7 +282,9 @@
             </ul>
             <button class="button-more accent-catalog" type="button">Загрузить ещё</button>
             <div class="pagination">
-              <a class="pagination-button pagination-prev accent-main pagination-disabled">Назад</a>
+              <div class="pagination-button-wrapper">
+                <a class="pagination-button pagination-prev accent-main pagination-disabled">Назад</a>
+              </div>
               <ul class="pagination-list">
                 <li class="pagination-item">
                   <a class="pagination-link pagination-link-current small-text">1</a>
@@ -291,13 +296,15 @@
                   <a class="pagination-link small-text" href="#">3</a>
                 </li>
                 <li class="pagination-item">
-                  <span class="pagination-dots small-text">…</span>
+                  <span class="pagination-dots small-text">...</span>
                 </li>
                 <li class="pagination-item">
                   <a class="pagination-link small-text" href="#">15</a>
                 </li>
               </ul>
-              <a class="pagination-button pagination-next accent-main" href="#">Вперед</a>
+              <div class="pagination-button-wrapper pagination-button-wrapper-next">
+                <a class="pagination-button pagination-next accent-main" href="#">Вперёд</a>
+              </div>
             </div>
           </section>
         </div>

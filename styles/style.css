@@ -2362,74 +2362,26 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  padding: 26px 40px 0 40px;
-}
-
-.sorting-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100px;
-  margin-left: auto;
-}
-
-.sorting-button {
-  display: block;
-  width: 34px;
-  height: 34px;
-  margin: -7px -2px;
-  background-image: url("../images/catalog/sorting-button.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.2;
-}
-
-.sorting-button-down {
-  transform: rotate(180deg);
-}
-
-.sorting-button:hover {
-  opacity: 0.5;
-}
-
-.sorting-button:focus-visible {
-  opacity: 0.5;
-}
-
-.sorting-button:focus-visible {
-  opacity: 0.5;
-}
-
-.product-photo-wrapper {
-  position: relative;
-  display: flex;
-  margin-bottom: 32px;
-}
-
-.product-photo-wrapper::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #f0f0f0;
-  opacity: 0.8;
-  z-index: 1;
-  display: none;
+  padding: 22px 40px 0 40px;
 }
 
 .sorting-title {
-  margin: 0 52px 25px 0;
+  margin: 5px 42px 25px 0;
   width: 300px;
 }
 
 .sorting-select {
-  padding: 4px 10px;
+  max-width: 320px;
+  padding: 0 30px 0 10px;
   font: inherit;
   line-height: 30px;
   color: #000000;
   border: none;
   background-color: rgba(255, 255, 255, 0);
+  background-image: url("../images/catalog/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -2451,6 +2403,78 @@ margin: 0;
     outline: 2px solid #af4fff;
     outline-offset: 2px;
   }
+}
+
+.sorting-select:disabled {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.sorting-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100px;
+  margin-left: auto;
+}
+
+.sorting-button {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  margin: -3px -2px;
+}
+
+.sorting-button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/catalog/sorting-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.sorting-button-down::before {
+  transform: rotate(180deg);
+}
+
+.sorting-button:hover::before {
+  opacity: 0.5;
+}
+
+.sorting-button:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .sorting-button:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
+}
+
+.sorting-button:active::before {
+  opacity: 1;
+}
+
+.product-photo-wrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.product-photo-wrapper::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  opacity: 0.8;
+  z-index: 1;
+  display: none;
 }
 
 .products {
@@ -2575,10 +2599,6 @@ margin: 0;
   opacity: 0.6;
 }
 
-/* .product-link.product-new:hover::before {
-  opacity: 0.6;
-} */
-
 .product-link.product-new:active .product-title {
   opacity: 0.6;
 }
@@ -2590,7 +2610,7 @@ margin: 0;
 .button-more {
   width: 760px;
   margin-bottom: 44px;
-  padding: 16px 30px 14px;
+  padding: 15px 30px 14px 34px;
   text-align: center;
   background-color: #ffffff;
   border: 3px solid #e5e5e5;
@@ -2623,14 +2643,15 @@ margin: 0;
 }
 
 .pagination {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 187px 1fr 200px;
+  gap: 10px;
   align-items: center;
   background-color: #ebebeb;
 }
 
 .pagination-button {
-  display: block;
+  display: inline-flex;
   padding: 25px 23px;
   text-decoration: none;
 }
@@ -2664,9 +2685,8 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 491px;
   margin: 0;
-  padding: 0;
+  padding: 15px 0;
   list-style-type: none;
 }
 
@@ -2680,8 +2700,11 @@ margin: 0;
 }
 
 .pagination-dots {
+  display: block;
   padding: 10px 12px;
+  min-width: 40px;
   color: #444444;
+  text-align: center;
   opacity: 0.3;
   text-decoration: none;
 }
@@ -2709,4 +2732,8 @@ margin: 0;
     outline: 2px solid #af4fff;
     outline-offset: 2px;
   }
+}
+
+.pagination-button-wrapper-next {
+  justify-self: end;
 }
