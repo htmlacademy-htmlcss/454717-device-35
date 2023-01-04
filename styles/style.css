@@ -758,6 +758,7 @@ body {
 }
 
 .main-navigation-item {
+  max-width: 200px;
   margin: 0 43px 20px 0;
 }
 
@@ -1107,7 +1108,7 @@ body {
 }
 
 .services-button-active {
-  display: inline-flex;
+  display: inline-block;
   padding: 10px 120px 10px 10px;
   width: 280px;
   color: #ffe17f;
@@ -1121,6 +1122,7 @@ body {
 .services-button-active:focus,
 .services-button-active:active {
   padding-right: 94px;
+  padding-left: 46px;
   outline: none;
 }
 
@@ -1387,18 +1389,17 @@ body {
 }
 
 .subscribe-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 458px 552px;
+  gap: 30px 150px;
 }
 
 .subscribe-title {
-  width: 348px;
   margin: 0 0 0 7px;
 }
 
 .subscribe-description {
-  margin: 9px 0 0 252px;
-  width: 529px;
+  margin: 9px 23px 0 0;
 }
 
 .subscribe-form {
@@ -1689,6 +1690,7 @@ body {
   position: relative;
   display: block;
   margin-bottom: 10px;
+  text-align: end;
   color: #ffffff;
 }
 
@@ -1705,7 +1707,7 @@ body {
 .footer-copyright-link {
   align-self: flex-end;
   display: flex;
-  margin-bottom: 5px;
+  margin: 30px 0 5px 20px;
   color: #ffc700;
 }
 
@@ -2470,9 +2472,9 @@ margin: 0;
 }
 
 .product-photo-wrapper {
+  grid-column: 1/-1;
   position: relative;
   display: flex;
-  margin-bottom: 32px;
 }
 
 .product-photo-wrapper::before {
@@ -2504,8 +2506,9 @@ margin: 0;
 
 .product-link {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 210px 117px;
+  gap: 32px;
   text-decoration: none;
 }
 
@@ -2533,14 +2536,12 @@ margin: 0;
 }
 
 .product-title {
-  width: 224px;
   margin: 0;
 }
 
 .product-price {
-  max-width: 135px;
+  justify-self: end;
   color: #444444;
-  margin-left: auto;
   line-height: 21px;
 }
 
