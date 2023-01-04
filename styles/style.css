@@ -120,7 +120,7 @@ body {
   opacity: 0.3;
 }
 
-.link:focus-visible  {
+.link:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -185,7 +185,7 @@ body {
 }
 
 .form-states:active {
-   background-color: #ebebeb;
+  background-color: #ebebeb;
 }
 
 .form-states:not(:placeholder-shown) {
@@ -629,11 +629,11 @@ body {
 }
 
 .cart-button:active {
-  color:rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .cart-button:not([href]) {
-  color:rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
   pointer-events: none;
 }
 
@@ -672,7 +672,7 @@ body {
 }
 
 .header-catalog-button-icon::after,
-.header-catalog-button-icon::before  {
+.header-catalog-button-icon::before {
   position: absolute;
   content: "";
   width: 16px;
@@ -1282,6 +1282,7 @@ body {
   padding: 0;
   list-style-type: none;
 }
+
 .transport-company-item {
   position: relative;
 }
@@ -1356,7 +1357,7 @@ body {
   opacity: 0.6;
 }
 
-.contacts-address-phone:active{
+.contacts-address-phone:active {
   opacity: 0.3;
 }
 
@@ -1376,6 +1377,10 @@ body {
   margin: 0 0 30px 0;
   padding: 0;
   list-style-type: none;
+}
+
+.button-feedback {
+  padding: 10px 32px;
 }
 
 .subscribe {
@@ -1550,7 +1555,7 @@ body {
   }
 }
 
-.footer-container{
+.footer-container {
   display: grid;
   grid-template-columns: 239px 1fr 239px;
   gap: 30px;
@@ -1649,15 +1654,15 @@ body {
   height: 100%;
 }
 
-.footer-socials-telegram::before  {
+.footer-socials-telegram::before {
   background-image: url("../images/footer/socials-telegram.svg");
 }
 
-.footer-socials-youtube::before  {
+.footer-socials-youtube::before {
   background-image: url("../images/footer/socials-youtube.svg");
 }
 
-.footer-socials-twitter::before  {
+.footer-socials-twitter::before {
   background-image: url("../images/footer/socials-twitter.svg");
 }
 
@@ -1674,7 +1679,7 @@ body {
   outline: none;
 }
 
-.footer-socials-link:active::before  {
+.footer-socials-link:active::before {
   opacity: 0.3;
 }
 
@@ -2054,9 +2059,9 @@ body {
 
 .delivery-input-amount::-webkit-outer-spin-button,
 .delivery-input-amount::-webkit-inner-spin-button {
--webkit-appearance: none;
-appearance: none;
-margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .delivery-input-amount:hover {
@@ -2255,11 +2260,11 @@ margin: 0;
   opacity: 0.3;
 }
 
-.filter-input-price:hover::placeholder{
+.filter-input-price:hover::placeholder {
   opacity: 0.8;
 }
 
-.filter-input-price:hover:not(:placeholder-shown){
+.filter-input-price:hover:not(:placeholder-shown) {
   opacity: 0.5;
 }
 
