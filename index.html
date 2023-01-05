@@ -35,8 +35,9 @@
           <li class="user-navigation-item">
             <a class="user-navigation-link user-navigation-compare link" href="#">Сравнить</a>
           </li>
-          <li class="user-navigation-item user-navigation-item-char">
-            <button class="user-navigation-link user-navigation-cart link" type="button" data-counter="2">Корзина</button>
+          <li class="user-navigation-item user-navigation-item-char" tabindex="0">
+             <!-- tabindex="0" добавлен для корректной работы в Safari -->
+            <button class="user-navigation-link user-navigation-cart link" type="button" data-counter="2" tabindex="-1">Корзина</button>
             <section class="cart">
               <h2 class="visually-hidden">Корзина.</h2>
               <ul class="cart-products-list">
@@ -74,8 +75,9 @@
         </ul>
       </div>
       <nav class="navigation">
-        <div class="navigation-header-catalog">
-          <button class="header-catalog-button" type="button">
+        <div class="navigation-header-catalog" tabindex="0">
+          <!-- tabindex="0" добавлен для корректной работы в Safari -->
+          <button class="header-catalog-button" type="button" tabindex="-1">
             <span class="header-catalog-button-text accent-main">Каталог товаров</span>
             <span class="header-catalog-button-icon"></span>
           </button>

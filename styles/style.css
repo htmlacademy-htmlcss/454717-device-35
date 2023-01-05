@@ -463,6 +463,16 @@ body {
   display: block;
 }
 
+/* Для корректной работы в Safari */
+.user-navigation-item-char:focus {
+  outline: none;
+}
+
+.user-navigation-item-char:focus .user-navigation-cart {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .cart::before {
   position: absolute;
   top: -6px;
@@ -690,11 +700,6 @@ body {
   opacity: 1;
 }
 
-.header-catalog-button:focus {
-  outline: 2px solid #af4fff;
-  outline-offset: 2px;
-}
-
 .header-catalog-list {
   position: absolute;
   display: none;
@@ -718,6 +723,16 @@ body {
 
 .navigation-header-catalog:focus-within .header-catalog-button-icon::before {
   display: none;
+}
+
+/* Для корректной работы в Safari */
+.navigation-header-catalog:focus {
+  outline: none;
+}
+
+.navigation-header-catalog:focus .header-catalog-button {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .header-catalog-item:last-child {
@@ -1887,6 +1902,13 @@ body {
   border: none;
   pointer-events: all;
   cursor: pointer;
+}
+
+/* Для корректной работы в Safari */
+.delivery-input-text::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
 }
 
 .delivery-input-name {
