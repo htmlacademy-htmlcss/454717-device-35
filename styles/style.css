@@ -2726,7 +2726,7 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination-disabled {
+.pagination-button:not([href]) {
   color: rgba(68, 68, 68, 0.3);
   pointer-events: none;
 }
