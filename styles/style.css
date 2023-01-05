@@ -265,7 +265,8 @@ body {
 .header-input-search::-webkit-search-cancel-button,
 .header-input-search::-webkit-search-results-button,
 .header-input-search::-webkit-search-results-decoration {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .header-input-search::placeholder {
@@ -2408,7 +2409,8 @@ body {
   background-image: url("../images/catalog/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 4px center;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
