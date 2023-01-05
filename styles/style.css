@@ -1796,6 +1796,15 @@ body {
   transform: rotate(135deg);
 }
 
+.modal-button-close-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+}
+
 .modal-button-close:hover {
   opacity: 0.6;
 }
