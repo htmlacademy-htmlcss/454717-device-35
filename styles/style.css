@@ -1466,6 +1466,7 @@ body {
 .button-subscribe {
   width: 253px;
   padding: 14px;
+  background-color: transparent;
   border: 3px solid #c4c4c4;
   cursor: pointer;
 }
